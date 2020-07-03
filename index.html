@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>shin school Login 薰的課程教學登入系統</title>
+    <!--文字自型插件-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <!--          -->
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Shin School [Login Web]<br>薰的課程[教學登入系統]</h3>
+    <input type="email" placeholder="Email帳號..." id="email_field" />
+    <input type="password" placeholder="Password密碼..." id="password_field" />
+
+    <button onclick="login()">登入</button>
+  </div>
+
+    <!--登入成功畫面-->
+  <div id="user_div" class="loggedin-div">
+    <button onclick="logout()">登出</button>
+    <h3>歡迎你使用者</h3>
+    <p id="user_para">恭喜你使用者，成功登入此頁面</p>
+    
+    <button onclick="self.location.href='https://www.youtube.com/chiaoshin'">
+        進入教學網站
+    </button>
+      
+  </div>
+
+
+<!--別人插件套用-->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAwwHYSeTqNZnbJl_IYXEEZUch8wbqmsd8",
+      authDomain: "shinshoolweblogin.firebaseapp.com",
+      databaseURL: "https://shinshoolweblogin.firebaseio.com",
+      projectId: "shinshoolweblogin",
+      storageBucket: "shinshoolweblogin.appspot.com",
+      messagingSenderId: "445810485808"
+    };
+    firebase.initializeApp(config);
+  </script>
+    
+
+<!-- 插件 
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBupQ8FiE78FOqBMXDq0AzAmV2CFKp-QZY",
+    authDomain: "test-eab29.firebaseapp.com",
+    databaseURL: "https://test-eab29.firebaseio.com",
+    projectId: "test-eab29",
+    storageBucket: "test-eab29.appspot.com",
+    messagingSenderId: "531344600",
+    appId: "1:531344600:web:9a4fe3eca00b4d559f7bad"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+-->   
+
+<script src="index.js"></script>
+    
+
+    
+</body>
+</html>
